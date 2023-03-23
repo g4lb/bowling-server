@@ -53,7 +53,7 @@ export class GameManager {
       playerId: addPlayerScoreDto.playerId
     }
     const playerDetails = await this.playerManager.getPlayerDetails(getPlayerDetailsDto)
-    if (playerDetails.currentFrame === ServerConsts.MAX_FRAME){
+    if (playerDetails.currentFrame >= ServerConsts.MAX_FRAME){
       throw new BadRequestException(ErrorMessageEnum.MAX_FRAMES)
     }
     const rolls = addPlayerScoreDto.rolls
