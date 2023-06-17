@@ -39,3 +39,7 @@ npm install
 ```bash
 npm start
 ```
+
+## API Endpoints
+
+use the attached postman file
